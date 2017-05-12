@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+<script src="Calc.js"></script>
+  
+    
+    <body>
+
+      <form  method="post">
+      
+        <h1>Calculator</h1>
+        
+        
+         
+         <p>
+          <input type="text" id="num1">
+          <label id="sign"></label>
+          <input type="text" id="num2">
+          </p>
+          <br>
+          <p>
+          <input type="text" id="ans" >
+			<p id="finalans" > </p>
+          </p>
+          <p>  
+          
+          
+          
+       <br>   -------------- <br>
+         <div id="printableArea">
+        <p id="totalVal12"> </p>
+        </div>
+        
+        
+         <br>
+        <button onclick="return add();" type="button">+</button>
+        <button  onclick="sub();"type="button">-</button>
+        <button  onclick="mul();"type="button">*</button>
+        <button  onclick="div();"type="button">/</button> </p>    
+           <br>
+         
+         
+       
+         
+        
+      </form>
+      
+ 
+
+<input type="button" onclick="printDiv('printableArea')" value="print a div!" />
+
+
+<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+	 
+	// alert(originalContents);
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+	 return false;
+	 
+	
+}
+</script> 
+  
+  
+</body>
+</html>
